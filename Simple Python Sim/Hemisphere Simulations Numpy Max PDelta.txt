@@ -1,0 +1,73 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.special import spherical_jn
+
+# Constants
+v_water = 1480  # Speed of sound in water (m/s)
+radius_sphere = 37e-3  # 37mm in meters
+f = 40e3  # 40 kHz frequency
+vibration_amplitude = 20e-6  # 20 microns in meters
+
+# Define time steps for a full cycle at 40 kHz
+num_time_steps = 50  # Number of time steps in the cycle
+time_steps = np.linspace(0, 1 / f, num_time_steps)  # One full cycle of 40 kHz
+
+# Define the 3D spatial domain in spherical coordinates
+phi = np.linspace(0, 2 * np.pi, 100)  # Azimuthal angle (0 to 360 degrees)
+theta = np.linspace(0, np.pi, 100)  # Polar angle (0 to 180 degrees)
+r = np.linspace(0, radius_sphere, 50)  # Radial distance from center to surface
+
+# Create meshgrid for 3D spherical space
+R, Theta, Phi = np.meshgrid(r, theta, phi, indexing='ij')
+
+# Compute radial distances from the transducers at the poles
+R_top = np.sqrt(R**2 + (R * np.cos(Theta) - radius_sphere)**2)
+R_bottom = np.sqrt(R**2 + (R * np.cos(Theta) + radius_sphere)**2)
+
+# Initialize arrays to store min and max pressures over the cycle
+pressure_min = np.full_like(R, np.inf)
+pressure_max = np.full_like(R, -np.inf)
+
+# Iterate over time steps to track min and max pressure values
+for t in time_steps:
+    # Compute the oscillating pressure field at each time step
+    pressure_field = vibration_amplitude * (
+        np.sin((2 * np.pi * f * t) + (2 * np.pi * f / v_water) * R_top) * np.cos(Theta) +
+        np.sin((2 * np.pi * f * t) + (2 * np.pi * f / v_water) * R_bottom) * np.cos(np.pi - Theta)
+    )
+
+    # Update min and max pressures
+    pressure_min = np.minimum(pressure_min, pressure_field)
+    pressure_max = np.maximum(pressure_max, pressure_field)
+
+# Compute the delta pressure (oscillation amplitude)
+pressure_delta = pressure_max - pressure_min
+
+# Normalize pressure oscillation amplitude for visualization
+pressure_norm = (pressure_delta - np.min(pressure_delta)) / (np.max(pressure_delta) - np.min(pressure_delta))
+
+# Apply mask to show only the top 80% of pressure oscillation amplitude
+mask = pressure_norm >= 0.8
+
+# Convert spherical coordinates to Cartesian for 3D plotting
+X = R * np.sin(Theta) * np.cos(Phi)
+Y = R * np.sin(Theta) * np.sin(Phi)
+Z = R * np.cos(Theta)
+
+# Apply mask to only show high-pressure oscillation regions
+X_masked, Y_masked, Z_masked, P_masked = X[mask], Y[mask], Z[mask], pressure_norm[mask]
+
+# Create 3D figure
+fig = plt.figure(figsize=(8, 8))
+ax = fig.add_subplot(111, projection='3d')
+
+# Scatter plot with color-mapped pressure intensity (showing top 80% of oscillation amplitude)
+ax.scatter(X_masked * 1000, Y_masked * 1000, Z_masked * 1000, c=P_masked, cmap='coolwarm', alpha=0.6, s=1)
+
+# Labels and visualization tweaks
+ax.set_xlabel("X Axis (mm)")
+ax.set_ylabel("Y Axis (mm)")
+ax.set_zlabel("Z Axis (mm)")
+ax.set_title("3D High-Oscillation Regions (Radius 37mm) Above 80% Pressure Amplitude")
+
+plt.show()
