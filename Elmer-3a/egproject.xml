@@ -1,0 +1,3461 @@
+<!DOCTYPE egproject>
+<contents>
+   <geometryinputfile>AQ25010-2002-Elmer-3.msh</geometryinputfile>
+   <operations/>
+   <generalsetup>
+      <widget type="CheckBox">
+         <objectName>checkKeywordsWarn</objectName>
+         <isChecked>1</isChecked>
+      </widget>
+      <widget type="CheckBox">
+         <objectName>calculateMeshPiecesCheck</objectName>
+         <isChecked>0</isChecked>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>meshDBEdit1</objectName>
+         <text>.</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>meshDBEdit2</objectName>
+         <text>.</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>includePathEdit</objectName>
+         <text></text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>resultsDirectoryEdit</objectName>
+         <text></text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>steadyStateMaxIterEdit</objectName>
+         <text>1</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>coordinateMappingEdit</objectName>
+         <text>1 2 3</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>timeStepIntervalsEdit</objectName>
+         <text></text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>outputIntervalsEdit</objectName>
+         <text>1</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>timestepSizesEdit</objectName>
+         <text></text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>coordinateScalingEdit</objectName>
+         <text></text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>angularFrequencyEdit</objectName>
+         <text></text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>solverInputFileEdit</objectName>
+         <text>case.sif</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>postFileEdit</objectName>
+         <text>case.vtu</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>desiredMeshPiecesEdit</objectName>
+         <text></text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>gravityEdit</objectName>
+         <text>0 -1 0 9.82</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>boltzmannEdit</objectName>
+         <text>1.380649e-23</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>stefanBoltzmannEdit</objectName>
+         <text>5.670374419e-08</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>unitChargeEdit</objectName>
+         <text>1.6021766e-19</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>vacuumPermittivityEdit</objectName>
+         <text>8.85418781e-12</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>vacuumPermeabilityEdit</objectName>
+         <text>1.25663706e-6</text>
+      </widget>
+      <widget type="TextEdit">
+         <objectName>headerFreeTextEdit</objectName>
+         <text></text>
+      </widget>
+      <widget type="TextEdit">
+         <objectName>simulationFreeTextEdit</objectName>
+         <text></text>
+      </widget>
+      <widget type="TextEdit">
+         <objectName>constantsFreeTextEdit</objectName>
+         <text></text>
+      </widget>
+      <widget type="ComboBox">
+         <objectName>maxOutputLevelCombo</objectName>
+         <currentIndex>4</currentIndex>
+      </widget>
+      <widget type="ComboBox">
+         <objectName>coordinateSystemCombo</objectName>
+         <currentIndex>0</currentIndex>
+      </widget>
+      <widget type="ComboBox">
+         <objectName>timesteppingMethodCombo</objectName>
+         <currentIndex>0</currentIndex>
+      </widget>
+      <widget type="ComboBox">
+         <objectName>bdfOrderCombo</objectName>
+         <currentIndex>0</currentIndex>
+      </widget>
+      <widget type="ComboBox">
+         <objectName>simulationTypeCombo</objectName>
+         <currentIndex>0</currentIndex>
+      </widget>
+   </generalsetup>
+   <parallelsettings>
+      <widget type="CheckBox">
+         <objectName>parallelActiveCheckBox</objectName>
+         <isChecked>0</isChecked>
+      </widget>
+      <widget type="CheckBox">
+         <objectName>skipPartitioningCheckBox</objectName>
+         <isChecked>0</isChecked>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>qt_spinbox_lineedit</objectName>
+         <text>2</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>parallelExecLineEdit</objectName>
+         <text>mpiexec.exe</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>parallelArgsLineEdit</objectName>
+         <text>-n %n ElmerSolver_mpi.exe</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>divideLineEdit</objectName>
+         <text>ElmerGrid 2 2 %msh -partdual -metiskway %n</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>mergeLineEdit</objectName>
+         <text>echo 'No need to merge VTU files!'</text>
+      </widget>
+   </parallelsettings>
+   <meshparameters>
+      <widget type="RadioButton">
+         <objectName>tetlibRadioButton</objectName>
+         <isChecked>0</isChecked>
+      </widget>
+      <widget type="RadioButton">
+         <objectName>nglibRadioButton</objectName>
+         <isChecked>1</isChecked>
+      </widget>
+      <widget type="RadioButton">
+         <objectName>elmerGridRadioButton</objectName>
+         <isChecked>0</isChecked>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>tetlibStringEdit</objectName>
+         <text>nnJApVq1.414</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>nglibMaxHEdit</objectName>
+         <text>1000000</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>nglibFinenessEdit</objectName>
+         <text>0.5</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>nglibBgmeshEdit</objectName>
+         <text></text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>elmerGridStringEdit</objectName>
+         <text>-autoclean -relh 1.0</text>
+      </widget>
+      <widget type="LineEdit">
+         <objectName>elementCodesStringEdit</objectName>
+         <text></text>
+      </widget>
+   </meshparameters>
+   <solverparameters>
+      <item name="Helmholtz Equation" index="2">
+         <widget type="RadioButton">
+            <objectName>execAlways</objectName>
+            <isChecked>1</isChecked>
+         </widget>
+         <widget type="RadioButton">
+            <objectName>execBeforeSimulation</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="RadioButton">
+            <objectName>execAfterSimulation</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="RadioButton">
+            <objectName>execBeforeTimestep</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="RadioButton">
+            <objectName>execAfterTimestep</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="RadioButton">
+            <objectName>execBeforeSaving</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="RadioButton">
+            <objectName>execAfterSaving</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="RadioButton">
+            <objectName>execNever</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="RadioButton">
+            <objectName>linearSystemSolverIterative</objectName>
+            <isChecked>1</isChecked>
+         </widget>
+         <widget type="RadioButton">
+            <objectName>linearSystemSolverDirect</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="RadioButton">
+            <objectName>linearSystemSolverMultigrid</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="CheckBox">
+            <objectName>mgEqualSplitCheck</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="CheckBox">
+            <objectName>adaptiveMeshRefinementCheck</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="CheckBox">
+            <objectName>adaptiveRemeshCheck</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="CheckBox">
+            <objectName>adaptiveSaveMeshCheck</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="CheckBox">
+            <objectName>adaptiveCoarseningCheck</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="CheckBox">
+            <objectName>useHypre</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="CheckBox">
+            <objectName>useParasails</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="CheckBox">
+            <objectName>useBoomerAMG</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="CheckBox">
+            <objectName>stabilizeCheck</objectName>
+            <isChecked>1</isChecked>
+         </widget>
+         <widget type="CheckBox">
+            <objectName>bubblesCheck</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="CheckBox">
+            <objectName>lumpedMassCheck</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="CheckBox">
+            <objectName>optimizeBandwidthCheck</objectName>
+            <isChecked>1</isChecked>
+         </widget>
+         <widget type="CheckBox">
+            <objectName>linearSystemAbortWhenNotConvergedCheck</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>mgLevelsEdit</objectName>
+            <text>2</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>mgMeshNameEdit</objectName>
+            <text></text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>mgPreSmoothingItersEdit</objectName>
+            <text>5</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>mgPostSmoothingItersEdit</objectName>
+            <text>5</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>mgMaxItersEdit</objectName>
+            <text>300</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>mgToleranceEdit</objectName>
+            <text>1.0e-8</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>mgILUTEdit</objectName>
+            <text>1.0e-3</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>adaptiveMeshNameEdit</objectName>
+            <text></text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>adaptiveErrorLimitEdit</objectName>
+            <text>0.1</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>adaptiveMinHEdit</objectName>
+            <text></text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>adaptiveMaxHEdit</objectName>
+            <text></text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>adaptiveMaxChangeEdit</objectName>
+            <text>2</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>thresholdEdit</objectName>
+            <text>-0.8</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>filterEdit</objectName>
+            <text>-0.8</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>maxLevelEdit</objectName>
+            <text>1</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>symmetryEdit</objectName>
+            <text>0</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>boomerMaxLevels</objectName>
+            <text>25</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>boomerSweeps</objectName>
+            <text>1</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>nonlinSystemConvergenceToleranceEdit</objectName>
+            <text>1.0e-7</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>nonlinSystemMaxIterationEdit</objectName>
+            <text>20</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>nonlinSystemRelaxationFactorEdit</objectName>
+            <text>1</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>nonlinSystemNewtonAfterIterEdit</objectName>
+            <text>3</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>nonlinSystemNewtonAfterTolEdit</objectName>
+            <text>1.0e-3</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>steadyStateConvergenceToleranceEdit</objectName>
+            <text>1.0e-5</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>linearSystemMaxIterationsEdit</objectName>
+            <text>500</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>linearSystemConvergenceToleranceEdit</objectName>
+            <text>1.0e-10</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>linearSystemILUTToleranceEdit</objectName>
+            <text>1.0e-3</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>linearSystemResiduaOutputEdit</objectName>
+            <text>10</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>linearSystemPreconditionRecomputeEdit</objectName>
+            <text>1</text>
+         </widget>
+         <widget type="LineEdit">
+            <objectName>linearSystemBiCGstablPolDeg</objectName>
+            <text>2</text>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boomerCycle</objectName>
+            <currentIndex>1</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boomerCoarsening</objectName>
+            <currentIndex>6</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boomerRelaxation</objectName>
+            <currentIndex>3</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boomerInterpolation</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boomerSmoother</objectName>
+            <currentIndex>6</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>nonlinSystemConvergenceMeasureCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>steadyStateConvergenceMeasureCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>linearSystemMultigridMethod</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>linearSystemDirectMethod</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>linearSystemIterativeMethod</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>linearSystemPreconditioning</objectName>
+            <currentIndex>3</currentIndex>
+         </widget>
+      </item>
+   </solverparameters>
+   <equation>
+      <item index="0">
+         <active>1</active>
+         <name>Equation 1</name>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/Equation/Convect/0</key>
+            <value>1</value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/Equation/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Equation/Priority/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/Equation/Options/0</key>
+            <value>Options</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Equation/Element Codes/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/Equation/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Equation/This and that/0</key>
+            <value>This and that</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Equation/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Label">
+            <key>/Electrostatics/Equation/Activate for this equation set/0</key>
+            <value>Activate for this equation set</value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/Equation/Activate for this equation set/0</key>
+            <value>Activate for this equation set</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Equation/Convection Velocity 3/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/Equation/Give Execution priority/0</key>
+            <value>Give Execution priority</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Equation/Angular Frequency/0</key>
+            <value>251327.4</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Equation/Priority/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Equation/Convection Velocity 2/0</key>
+            <value>0.0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/Equation/Active/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/Equation/Priority/0</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Heat Equation/Equation/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Equation/Plane Stress/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Equation/Activate for this equation set/0</key>
+            <value>Activate for this equation set</value>
+         </widget>
+         <widget type="Label">
+            <key>/Result Output/Equation/Activate for this equation set/0</key>
+            <value>Activate for this equation set</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Equation/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Equation/Convection Velocity 1/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Mesh Update/Equation/Active/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Equation/Priority/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/Equation/Give Execution priority/0</key>
+            <value>Give Execution priority</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Equation/This and that/0</key>
+            <value>This and that</value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/Equation/Options/0</key>
+            <value>Options</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Electrostatics/Equation/Active/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/Equation/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Electrostatics/Equation/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Electrostatics/Equation/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/Equation/Activate for this equation set/0</key>
+            <value>Activate for this equation set</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Equation/Activate for this equation set/0</key>
+            <value>Activate for this equation set</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/Equation/Active/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Equation/Give Execution priority/0</key>
+            <value>Give Execution priority</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Equation/Options/0</key>
+            <value>Options</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Equation/Options/0</key>
+            <value>Options</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Helmholtz Equation/Equation/Active/0</key>
+            <value>1</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Linear elasticity/Equation/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Combo">
+            <key>/Heat Equation/Equation/Convection/0</key>
+            <value>None</value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/Equation/Activate for this equation set/0</key>
+            <value>Activate for this equation set</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Result Output/Equation/Priority/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Equation/Convection Velocity 3/0</key>
+            <value>0.0</value>
+         </widget>
+         <widget type="Combo">
+            <key>/Electrostatics/Equation/Electric Field/0</key>
+            <value>None</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Equation/Active/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Equation/Element Codes/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Result Output/Equation/Active/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Combo">
+            <key>/Heat Equation/Equation/Phase Change Model/0</key>
+            <value>None</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/Equation/Priority/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Equation/Element Codes/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/Equation/Give Execution priority/0</key>
+            <value>Give Execution priority</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Equation/Priority/0</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Result Output/Equation/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/Equation/Convection/0</key>
+            <value>Convection</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Equation/Convection Velocity 1/0</key>
+            <value>0.0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Equation/Calculate Stresses/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Navier-Stokes/Equation/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Helmholtz Equation/Equation/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Electrostatics/Equation/Give Execution priority/0</key>
+            <value>Give Execution priority</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Mesh Update/Equation/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Equation/Convection Velocity 2/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Result Output/Equation/Give Execution priority/0</key>
+            <value>Give Execution priority</value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/Equation/This and that/0</key>
+            <value>This and that</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Equation/Give Execution priority/0</key>
+            <value>Give Execution priority</value>
+         </widget>
+         <widget type="Label">
+            <key>/Result Output/Equation/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+      </item>
+   </equation>
+   <material>
+      <item index="0">
+         <active>1</active>
+         <name>Water (room temperature)</name>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Damping coefficient/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Rayleigh Damping Beta/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Strain 6-vector/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Material/Pressure Coefficient/0</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Linear elasticity/Material/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/General/Material/Properties/0</key>
+            <value>Properties</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Material/Specific Enthalpy/0</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/General/Material/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/Material/Relative Permittivity/0</key>
+            <value>80.1</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Stress 6-vector/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Material/Emissivity/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Unit Vector 3/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Rayleigh Damping Alpha/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/Material/Heat expansion Coeff./0</key>
+            <value>0.207e-3</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Poisson ratio/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Viscosity Exponent/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/Material/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/Material/Porous Media/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Viscosity Temp Exp/0</key>
+            <value></value>
+         </widget>
+         <widget type="Combo">
+            <key>/Navier-Stokes/Material/Compressibility Model/0</key>
+            <value>None</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/Material/Mesh Poisson ratio/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Unit Vector 1/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Material/Properties/0</key>
+            <value>Properties</value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/Material/Reference Pressure/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Material/Turbulent Prandtl Number/0</key>
+            <value>7.01</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Material/Rotate Elasticity Tensor/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Material/Rayleigh Damping/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Levelset Bandwidth/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Smagorinsky Constant/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/Material/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Material/Porous media settings/0</key>
+            <value>Porous media settings</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Material/Heat Conductivity/0</key>
+            <value>0.58</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Viscosity/0</key>
+            <value>1.002e-3</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Yasuda Coefficient/0</key>
+            <value>2</value>
+         </widget>
+         <widget type="Label">
+            <key>/Electrostatics/Material/Properties/0</key>
+            <value>Properties</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Unit Vector 2/0</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Heat Equation/Material/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Material/Damping coefficient/0</key>
+            <value>0.01</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Material/Material principal directions/0</key>
+            <value>Material principal directions</value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/Material/Specific Heat Ratio/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/Material/Reference Temperature/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Porous Resistivity/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Material/Compressibility models/0</key>
+            <value>Compressibility models</value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/Material/Heat Capacity/0</key>
+            <value>4183.0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Youngs modulus/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Viscosity Transition/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Material/Visocity Settings/0</key>
+            <value>Visocity Settings</value>
+         </widget>
+         <widget type="Combo">
+            <key>/Heat Equation/Material/Heat Conductivity Model/0</key>
+            <value>None</value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/Material/Properties/0</key>
+            <value>Properties</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Material/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/Material/Properties/0</key>
+            <value>Properties</value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/Material/Density/0</key>
+            <value>998.3</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Artificial Compressibility/0</key>
+            <value></value>
+         </widget>
+         <widget type="Combo">
+            <key>/Navier-Stokes/Material/Viscosity Model/0</key>
+            <value>None</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Material/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Navier-Stokes/Material/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Artificial Pressure/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Viscosity Difference/0</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Mesh Update/Material/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Material/Enthalpy/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/Material/Properties/0</key>
+            <value>Properties</value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/Material/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Material/Sound speed/0</key>
+            <value>1497.0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/Material/Mesh Elastic modulus/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Critical Shear Rate/0</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Helmholtz Equation/Material/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Viscosity Temp Ref/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/General/Material/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+      </item>
+      <item index="1">
+         <active>1</active>
+         <name>Aluminium (generic)</name>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Viscosity Transition/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Unit Vector 3/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Unit Vector 1/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/Material/Specific Heat Ratio/1</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Material/Free text input/1</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/Material/Reference Pressure/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Poisson ratio/1</key>
+            <value>0.35</value>
+         </widget>
+         <widget type="Combo">
+            <key>/Heat Equation/Material/Heat Conductivity Model/1</key>
+            <value>None</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Rayleigh Damping Alpha/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Levelset Bandwidth/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/Material/Density/1</key>
+            <value>2700.0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/Material/Porous Media/1</key>
+            <value>0</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Mesh Update/Material/Free text/1</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Material/Material principal directions/1</key>
+            <value>Material principal directions</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/Material/Mesh Elastic modulus/1</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Material/Free text input/1</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/Material/Heat expansion Coeff./1</key>
+            <value>23.1e-6</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Material/Compressibility models/1</key>
+            <value>Compressibility models</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Smagorinsky Constant/1</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/Material/Free text input/1</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/Material/Relative Permittivity/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Artificial Pressure/1</key>
+            <value></value>
+         </widget>
+         <widget type="Combo">
+            <key>/Navier-Stokes/Material/Viscosity Model/1</key>
+            <value>None</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Navier-Stokes/Material/Free text/1</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/General/Material/Free text input/1</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Viscosity Temp Ref/1</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/Material/Properties/1</key>
+            <value>Properties</value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/Material/Free text input/1</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Combo">
+            <key>/Navier-Stokes/Material/Compressibility Model/1</key>
+            <value>None</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Stress 6-vector/1</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Material/Rotate Elasticity Tensor/1</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Electrostatics/Material/Properties/1</key>
+            <value>Properties</value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/Material/Heat Capacity/1</key>
+            <value>897.0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Youngs modulus/1</key>
+            <value>70.0e9</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Helmholtz Equation/Material/Free text/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Viscosity Difference/1</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/General/Material/Free text/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Material/Pressure Coefficient/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Damping coefficient/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Material/Turbulent Prandtl Number/1</key>
+            <value>0.85</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Critical Shear Rate/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Yasuda Coefficient/1</key>
+            <value>2</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Material/Visocity Settings/1</key>
+            <value>Visocity Settings</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Material/Specific Enthalpy/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Porous Resistivity/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Material/Emissivity/1</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Linear elasticity/Material/Free text/1</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/General/Material/Properties/1</key>
+            <value>Properties</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Heat Equation/Material/Free text/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Material/Sound speed/1</key>
+            <value>5000.0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Rayleigh Damping Beta/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Viscosity Temp Exp/1</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Material/Properties/1</key>
+            <value>Properties</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Material/Enthalpy/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Artificial Compressibility/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/Material/Reference Temperature/1</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/Material/Properties/1</key>
+            <value>Properties</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Material/Porous media settings/1</key>
+            <value>Porous media settings</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Strain 6-vector/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Material/Unit Vector 2/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/Material/Mesh Poisson ratio/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Viscosity/1</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/Material/Free text input/1</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Material/Viscosity Exponent/1</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Material/Heat Conductivity/1</key>
+            <value>237.0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/Material/Properties/1</key>
+            <value>Properties</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Material/Rayleigh Damping/1</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Material/Damping coefficient/1</key>
+            <value></value>
+         </widget>
+      </item>
+   </material>
+   <bodyforce/>
+   <initialcondition/>
+   <boundarycondition>
+      <item index="0">
+         <active>1</active>
+         <name>BoundaryCondition Left</name>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Phase Velocity 2/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/BoundaryCondition/Periodic BCs/0</key>
+            <value>Periodic BCs</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/External Temperature/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Helmholtz Equation/BoundaryCondition/Pressure Wave 2 periodic/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Electrostatics/BoundaryCondition/Electric Infinity BC/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Pressure Wave 1 Condition/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/BoundaryCondition/Model Lumping Boundary/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/BoundaryCondition/Latent heat of phase change/0</key>
+            <value>Latent heat of phase change</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Surface Tension Expansion Coefficient/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 3/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Force 3/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 3 periodic/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/BoundaryCondition/Radiation Settings/0</key>
+            <value>Radiation Settings</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 3 Condition/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Imag part of the flux/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/BoundaryCondition/Normal-Tangential Coordinate System/0</key>
+            <value>Normal-Tangential Coordinate System</value>
+         </widget>
+         <widget type="Combo">
+            <key>/Heat Equation/BoundaryCondition/Radiation/0</key>
+            <value>None</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Phase Velocity 1/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/BoundaryCondition/Dirichlet Conditions/0</key>
+            <value>Dirichlet Conditions</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/External Pressure/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/BoundaryCondition/Traction boundary conditions/0</key>
+            <value>Traction boundary conditions</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Pressure 3/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 1 Condition/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Surface Tension Coefficient/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 2 Condition/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 3 periodic/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Radiation Target Body/0</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Linear elasticity/BoundaryCondition/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/BoundaryCondition/Potential Condition/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/BoundaryCondition/Change of variables/0</key>
+            <value>1</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Helmholtz Equation/BoundaryCondition/Plane wave outlet condition/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/BoundaryCondition/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 2/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/BoundaryCondition/Translate 3-vector/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/BoundaryCondition/Normal-Tangential Coordinate System/0</key>
+            <value>Normal-Tangential Coordinate System</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 2/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 1 Condition/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Pressure 2/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/BoundaryCondition/Flux conditions/0</key>
+            <value>Flux conditions</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/BoundaryCondition/Periodic boundary condition/0</key>
+            <value>Periodic boundary condition</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/BoundaryCondition/Capacitance Body/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/BoundaryCondition/Periodic boundary condition/0</key>
+            <value>Periodic boundary condition</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Helmholtz Equation/BoundaryCondition/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Spring coefficient/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 1/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/BoundaryCondition/Periodic boundary condition/0</key>
+            <value>Periodic boundary condition</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Stress 6-vector/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/BoundaryCondition/Periodic boundary condition/0</key>
+            <value>Periodic boundary condition</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/BoundaryCondition/Use normal-tangential coordinate system/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Force 1/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Force 2/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Pressure periodic/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Imag part of the impedance/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/BoundaryCondition/Dirichlet Conditions/0</key>
+            <value>Dirichlet Conditions</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 1/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 2 Condition/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/BoundaryCondition/Periodic Boundary ID/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/BoundaryCondition/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Pressure 1/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Phase Velocity 3/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/BoundaryCondition/Scale 3-vector/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 2 periodic/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/BoundaryCondition/Electric Flux/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Damping coefficient/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Change of variables/0</key>
+            <value>1</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/BoundaryCondition/Radiation Boundary Open/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/General/BoundaryCondition/Periodic boundary conditions/0</key>
+            <value>Periodic boundary conditions</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Normal Force/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Helmholtz Equation/BoundaryCondition/Pressure Wave 1 periodic/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Slip Coefficient 1/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 1/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Temperature Condition/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Pressure Wave 1 (real part)/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/BoundaryCondition/Heat Gap/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Heat Flux/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Emissivity/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 2 Condition/0</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Electrostatics/BoundaryCondition/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Mesh Update/BoundaryCondition/Use normal-tangential coordinate system/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Heat Transfer Coeff./0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/BoundaryCondition/Rotate 3-vector/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/BoundaryCondition/Potential/0</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/General/BoundaryCondition/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Mesh Update/BoundaryCondition/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 3/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/BoundaryCondition/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Label">
+            <key>/Electrostatics/BoundaryCondition/Neumann conditions/0</key>
+            <value>Neumann conditions</value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/BoundaryCondition/Dirichlet Conditions/0</key>
+            <value>Dirichlet Conditions</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 3 periodic/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 3/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 1 periodic/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/BoundaryCondition/Heat Flux conditions/0</key>
+            <value>Heat Flux conditions</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Mesh Update/BoundaryCondition/Change of variables/0</key>
+            <value>1</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Radiation Boundary/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/BoundaryCondition/Traction boundary conditions/0</key>
+            <value>Traction boundary conditions</value>
+         </widget>
+         <widget type="Label">
+            <key>/Electrostatics/BoundaryCondition/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Label">
+            <key>/General/BoundaryCondition/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/BoundaryCondition/Phase Change/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/BoundaryCondition/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 1 periodic/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Electrostatics/BoundaryCondition/Dirichlet conditions/0</key>
+            <value>Dirichlet conditions</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 2 periodic/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 1 periodic/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Heat Equation/BoundaryCondition/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 2 periodic/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/BoundaryCondition/Free text input/0</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/BoundaryCondition/Dirichlet Conditions/0</key>
+            <value>Dirichlet Conditions</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/BoundaryCondition/Temperature periodic/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 2/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 3 Condition/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Noslip wall BC/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 1 Condition/0</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Navier-Stokes/BoundaryCondition/Free text/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Real part of the flux/0</key>
+            <value>10000</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 3 Condition/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/BoundaryCondition/Miscellaneous/0</key>
+            <value>Miscellaneous</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Real part of the impedance/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Pressure Wave 2 Condition/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Pressure Wave 2 (imag part)/0</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Use normal-tangential coordinate system/0</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/BoundaryCondition/Dirichlet Conditions/0</key>
+            <value>Dirichlet Conditions</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Slip Coefficient 2/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Temperature/0</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Latent Heat/0</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/BoundaryCondition/Normal-Tangential Coordinate System/0</key>
+            <value>Normal-Tangential Coordinate System</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Slip Coefficient 3/0</key>
+            <value></value>
+         </widget>
+      </item>
+      <item index="1">
+         <active>1</active>
+         <name>BoundaryConditionRight</name>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 2 periodic/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/BoundaryCondition/Free text input/3</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Phase Velocity 3/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Emissivity/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Phase Velocity 1/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/BoundaryCondition/Radiation Boundary Open/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Electrostatics/BoundaryCondition/Neumann conditions/3</key>
+            <value>Neumann conditions</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Temperature Condition/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/General/BoundaryCondition/Free text input/3</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 2 Condition/3</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Helmholtz Equation/BoundaryCondition/Free text/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Heat Transfer Coeff./3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/BoundaryCondition/Traction boundary conditions/3</key>
+            <value>Traction boundary conditions</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 3/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/BoundaryCondition/Use normal-tangential coordinate system/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/BoundaryCondition/Periodic BCs/3</key>
+            <value>Periodic BCs</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Heat Equation/BoundaryCondition/Free text/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Radiation Target Body/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 1/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 2 Condition/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Helmholtz Equation/BoundaryCondition/Plane wave outlet condition/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Spring coefficient/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/BoundaryCondition/Dirichlet Conditions/3</key>
+            <value>Dirichlet Conditions</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 1 Condition/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Pressure 1/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/BoundaryCondition/Free text input/3</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Pressure Wave 1 (real part)/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 3 periodic/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 2/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/BoundaryCondition/Free text input/3</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/BoundaryCondition/Periodic boundary condition/3</key>
+            <value>Periodic boundary condition</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/BoundaryCondition/Miscellaneous/3</key>
+            <value>Miscellaneous</value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/BoundaryCondition/Heat Flux conditions/3</key>
+            <value>Heat Flux conditions</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Helmholtz Equation/BoundaryCondition/Pressure Wave 2 periodic/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/BoundaryCondition/Flux conditions/3</key>
+            <value>Flux conditions</value>
+         </widget>
+         <widget type="Combo">
+            <key>/Heat Equation/BoundaryCondition/Radiation/3</key>
+            <value>None</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/BoundaryCondition/Normal-Tangential Coordinate System/3</key>
+            <value>Normal-Tangential Coordinate System</value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/BoundaryCondition/Latent heat of phase change/3</key>
+            <value>Latent heat of phase change</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 2 periodic/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/BoundaryCondition/Free text input/3</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 3 Condition/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/BoundaryCondition/Periodic boundary condition/3</key>
+            <value>Periodic boundary condition</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Pressure Wave 1 Condition/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 3/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Change of variables/3</key>
+            <value>1</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Real part of the impedance/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/BoundaryCondition/Dirichlet Conditions/3</key>
+            <value>Dirichlet Conditions</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 1 Condition/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Surface Tension Expansion Coefficient/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Phase Velocity 2/3</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Electrostatics/BoundaryCondition/Free text/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Radiation Boundary/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Slip Coefficient 2/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Pressure Wave 2 Condition/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Heat Flux/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Force 2/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/BoundaryCondition/Change of variables/3</key>
+            <value>1</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 3/3</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Navier-Stokes/BoundaryCondition/Free text/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/BoundaryCondition/Phase Change/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Helmholtz Equation/BoundaryCondition/Pressure Wave 1 periodic/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 3 Condition/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 1 periodic/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/BoundaryCondition/Model Lumping Boundary/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 2/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Use normal-tangential coordinate system/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/BoundaryCondition/Potential Condition/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/BoundaryCondition/Dirichlet Conditions/3</key>
+            <value>Dirichlet Conditions</value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/BoundaryCondition/Periodic Boundary ID/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/BoundaryCondition/Translate 3-vector/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Imag part of the flux/3</key>
+            <value>-10000</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/General/BoundaryCondition/Free text/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/BoundaryCondition/Rotate 3-vector/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Latent Heat/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 2 periodic/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/BoundaryCondition/Normal-Tangential Coordinate System/3</key>
+            <value>Normal-Tangential Coordinate System</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Slip Coefficient 3/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/BoundaryCondition/Radiation Settings/3</key>
+            <value>Radiation Settings</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Pressure periodic/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 1 periodic/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 3 Condition/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Normal Force/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Stress 6-vector/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/BoundaryCondition/Free text input/3</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 1 Condition/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Electrostatics/BoundaryCondition/Free text input/3</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/BoundaryCondition/Dirichlet Conditions/3</key>
+            <value>Dirichlet Conditions</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 3 periodic/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/BoundaryCondition/Electric Flux/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Surface Tension Coefficient/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/BoundaryCondition/Capacitance Body/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/BoundaryCondition/Normal-Tangential Coordinate System/3</key>
+            <value>Normal-Tangential Coordinate System</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 2 Condition/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/BoundaryCondition/Periodic boundary condition/3</key>
+            <value>Periodic boundary condition</value>
+         </widget>
+         <widget type="Label">
+            <key>/Electrostatics/BoundaryCondition/Dirichlet conditions/3</key>
+            <value>Dirichlet conditions</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Pressure Wave 2 (imag part)/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Imag part of the impedance/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Force 3/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/Temperature/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Slip Coefficient 1/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Mesh Update/BoundaryCondition/Use normal-tangential coordinate system/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/BoundaryCondition/Dirichlet Conditions/3</key>
+            <value>Dirichlet Conditions</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Linear elasticity/BoundaryCondition/Free text/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Mesh Update/BoundaryCondition/Change of variables/3</key>
+            <value>1</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Velocity 3 periodic/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 2/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 1 periodic/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Displacement 1/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/General/BoundaryCondition/Scale 3-vector/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Electrostatics/BoundaryCondition/Electric Infinity BC/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/BoundaryCondition/Mesh Update 1/3</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Mesh Update/BoundaryCondition/Free text/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/BoundaryCondition/Potential/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/BoundaryCondition/External Temperature/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/General/BoundaryCondition/Periodic boundary conditions/3</key>
+            <value>Periodic boundary conditions</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/BoundaryCondition/Heat Gap/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Damping coefficient/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/BoundaryCondition/Real part of the flux/3</key>
+            <value>10000</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/BoundaryCondition/Periodic boundary condition/3</key>
+            <value>Periodic boundary condition</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Pressure 3/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/External Pressure/3</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/BoundaryCondition/Force 1/3</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/BoundaryCondition/Traction boundary conditions/3</key>
+            <value>Traction boundary conditions</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/BoundaryCondition/Noslip wall BC/3</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/BoundaryCondition/Pressure 2/3</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/BoundaryCondition/Temperature periodic/3</key>
+            <value>0</value>
+         </widget>
+      </item>
+   </boundarycondition>
+   <solverspecificoptions>
+      <item name="Helmholtz Equation" id="2" index="2">
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/Exported Variable 5/2</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/Solver/Additional Variables/2</key>
+            <value>Additional Variables</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Solver/Additional Variables/2</key>
+            <value>Additional Variables</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/Solver/Exported Variable 4/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Mesh Update/Solver/Calculate Loads/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/Solver/Capacitance Matrix Filename/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Solver/Geometric Stiffness/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Solver/Miscellaneous options/2</key>
+            <value>Miscellaneous options</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Result Output/Solver/Vector Field 2/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/Solver/Matrix Topology Fixed/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Result Output/Solver/Vector Fields/2</key>
+            <value>Vector Fields</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Solver/Model Lumping/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/Solver/Exported Variable 5/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Result Output/Solver/Single Precision/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/Solver/Gebhart Factors Solver Full/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Mesh Update/Solver/Free text/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Solver/Exported Variable 2/2</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/Solver/Free text input/2</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Result Output/Solver/Vector Field 1/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Solver/Exported Variable 3/2</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Solver/Model Lumping definitions/2</key>
+            <value>Model Lumping definitions</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Linear elasticity/Solver/Free text/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Result Output/Solver/Binary Output/2</key>
+            <value>1</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Solver/Exported Variable 4/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Solver/Exported Variable 4/2</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Solver/Harmonic system solution/2</key>
+            <value>Harmonic system solution</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Solver/Exported Variable 3/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/Viewfactor factor tolerance/2</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Solver/Additional Variables/2</key>
+            <value>Additional Variables</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Navier-Stokes/Solver/Free text/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/Solver/Update Gebhart Factors/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Solver/Exported Variable 5/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/Solver/Gebhart Factors Solver Iterative/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Result Output/Solver/Eigen Analysis/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/View Factors Fixed After Iterations/2</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Electrostatics/Solver/Free text/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Solver/Eigen Analysis/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Solver/Exported Variable 1/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Solver/Model Lumping Filename/2</key>
+            <value></value>
+         </widget>
+         <widget type="Combo">
+            <key>/Result Output/Solver/Output Format/2</key>
+            <value>Vtu</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Solver/Exported Variable 2/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/View Factors Geometry Tolerance/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Solver/Exported Variable 2/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Solver/Eigen System Shift/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Solver/Exported Variable 5/2</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Solver/Free text input/2</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Result Output/Solver/Scalar Field 3/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/Exported Variable 3/2</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Solver/Free text input/2</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Result Output/Solver/Free text/2</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Electrostatics/Solver/Free text input/2</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Solver/Procedure/2</key>
+            <value>"HelmholtzSolve" "HelmholtzSolver"</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/Viewfactor number of rays/2</key>
+            <value></value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Heat Equation/Solver/Free text/2</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Solver/More Options/2</key>
+            <value>More Options</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Solver/Procedure/2</key>
+            <value>"FlowSolve" "FlowSolver"</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Result Output/Solver/Save Elemental Fields/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Result Output/Solver/Scalar Field 4/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Solver/Stability Analysis/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/Solver/Exported Variable 2/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Result Output/Solver/Scalar Field 6/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Solver/Displace mesh/2</key>
+            <value>1</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/Exported Variable 2/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Solver/Eigen System Values/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Helmholtz Equation/Solver/Calculate Loads/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Result Output/Solver/Procedure/2</key>
+            <value>"ResultOutputSolve" "ResultOutputSolver"</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/Solver/Procedure/2</key>
+            <value>"StatElecSolve" "StatElecSolver"</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Solver/Exported Variable 4/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/Implicit Gebhart Factor Fraction/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Electrostatics/Solver/Constant Weights/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/Solver/Exported Variable 1/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/Procedure/2</key>
+            <value>"HeatSolve" "HeatSolver"</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/Solver/Update View Factors/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Electrostatics/Solver/Calculate Electric Field/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Linear elasticity/Solver/Eigen system solution/2</key>
+            <value>Eigen system solution</value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/Solver/Miscellaneous options/2</key>
+            <value>Miscellaneous options</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/Solver/Capacitance Bodies/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Heat Equation/Solver/Calculate Loads/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/Solver/Additional Variables/2</key>
+            <value>Additional Variables</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Solver/Variable/2</key>
+            <value>Flow Solution[Velocity:cdim Pressure:1]</value>
+         </widget>
+         <widget type="TextEdit">
+            <key>/Helmholtz Equation/Solver/Free text/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Result Output/Solver/Scalar Field 2/2</key>
+            <value></value>
+         </widget>
+         <widget type="Combo">
+            <key>/Linear elasticity/Solver/Eigen System Select/2</key>
+            <value>Smallest magnitude</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/Solver/Exported Variable 3/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/Variable/2</key>
+            <value>Temperature</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Solver/Exported Variable 5/2</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/Solver/Free text input/2</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Solver/Eigen System Damped/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Result Output/Solver/Save Geometry Ids/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/Exported Variable 4/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Result Output/Solver/Discontinuous Bodies/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/Exported Variable 1/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Navier-Stokes/Solver/Exported Variable 1/2</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/Solver/Radiation Factor computation/2</key>
+            <value>Radiation Factor computation</value>
+         </widget>
+         <widget type="Label">
+            <key>/Heat Equation/Solver/Parameters for 2- and 3D viewfactor computation/2</key>
+            <value>Parameters for 2- and 3D viewfactor computation</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Electrostatics/Solver/Variable/2</key>
+            <value>Potential</value>
+         </widget>
+         <widget type="Label">
+            <key>/Result Output/Solver/Scalar Fields/2</key>
+            <value>Scalar Fields</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Result Output/Solver/Scalar Field 5/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Electrostatics/Solver/Calculate Electric Energy/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/Solver/Variable/2</key>
+            <value>Mesh Update(cdim)</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Solver/Procedure/2</key>
+            <value>"StressSolve" "StressSolver"</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Result Output/Solver/No Matrix Equation/2</key>
+            <value>1</value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/Solver/Free text input/2</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Solver/Exported Variable 1/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/Minimum View Factor/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Result Output/Solver/Output File Name/2</key>
+            <value>case</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Electrostatics/Solver/Calculate Electric Flux/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/Viewfactor area tolerance/2</key>
+            <value></value>
+         </widget>
+         <widget type="Edit">
+            <key>/Helmholtz Equation/Solver/Variable/2</key>
+            <value>Pressure Wave(2)</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Mesh Update/Solver/Procedure/2</key>
+            <value>"MeshSolve" "MeshSolver"</value>
+         </widget>
+         <widget type="Label">
+            <key>/Navier-Stokes/Solver/Miscellaneous options/2</key>
+            <value>Miscellaneous options</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Electrostatics/Solver/Calculate Capacitance Matrix/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Heat Equation/Solver/Minimum Gebhart Factor/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Result Output/Solver/Save Linear Elements/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Result Output/Solver/Save Boundaries Only/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/Solver/Additional Variables/2</key>
+            <value>Additional Variables</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Solver/Frequency/2</key>
+            <value></value>
+         </widget>
+         <widget type="Label">
+            <key>/Result Output/Solver/Free text input/2</key>
+            <value>Free text input</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Navier-Stokes/Solver/Calculate Loads/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Solver/Calculate Stresses/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Solver/Calculate Loads/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Mesh Update/Solver/Miscellaneous options/2</key>
+            <value>Miscellaneous options</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Result Output/Solver/Save Nodal Fields/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Result Output/Solver/Discontinuous Galerkin/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Solver/Harmonic Analysis/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Result Output/Solver/Vector Field 3/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Solver/Eigen System Compute Residuals/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Label">
+            <key>/Helmholtz Equation/Solver/Miscellaneous options/2</key>
+            <value>Miscellaneous options</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Linear elasticity/Solver/Exported Variable 3/2</key>
+            <value></value>
+         </widget>
+         <widget type="CheckBox">
+            <key>/Linear elasticity/Solver/Fix Displacements/2</key>
+            <value>0</value>
+         </widget>
+         <widget type="Edit">
+            <key>/Result Output/Solver/Scalar Field 1/2</key>
+            <value></value>
+         </widget>
+      </item>
+   </solverspecificoptions>
+   <bodyproperties>
+      <item index="0">
+         <widget type="LineEdit">
+            <objectName>nameEdit</objectName>
+            <text>Body Property 1</text>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>equationCombo</objectName>
+            <currentIndex>1</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>materialCombo</objectName>
+            <currentIndex>2</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>bodyForceCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>initialConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="1">
+         <widget type="LineEdit">
+            <objectName>nameEdit</objectName>
+            <text>Body Property 2</text>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>equationCombo</objectName>
+            <currentIndex>1</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>materialCombo</objectName>
+            <currentIndex>1</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>bodyForceCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>initialConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="2">
+         <widget type="LineEdit">
+            <objectName>nameEdit</objectName>
+            <text>Body Property 3</text>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>equationCombo</objectName>
+            <currentIndex>1</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>materialCombo</objectName>
+            <currentIndex>2</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>bodyForceCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>initialConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+   </bodyproperties>
+   <boundaryproperties>
+      <item index="0">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="1">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>1</currentIndex>
+         </widget>
+      </item>
+      <item index="2">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="3">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="4">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="5">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="6">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="7">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="8">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="9">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="10">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="11">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="12">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="13">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="14">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="15">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="16">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="17">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="18">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="19">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="20">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="21">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="22">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="23">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="24">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="25">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>0</currentIndex>
+         </widget>
+      </item>
+      <item index="26">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>2</currentIndex>
+         </widget>
+      </item>
+      <item index="27">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="28">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="29">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="30">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="31">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="32">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="33">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="34">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="35">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="36">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="37">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="38">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="39">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="40">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="41">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="42">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="43">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="44">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="45">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="46">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="47">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="48">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="49">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="50">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="51">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="52">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="53">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="54">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+      <item index="55">
+         <widget type="CheckBox">
+            <objectName>boundaryAsABody</objectName>
+            <isChecked>0</isChecked>
+         </widget>
+         <widget type="ComboBox">
+            <objectName>boundaryConditionCombo</objectName>
+            <currentIndex>-1</currentIndex>
+         </widget>
+      </item>
+   </boundaryproperties>
+</contents>
