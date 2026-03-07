@@ -1,0 +1,19 @@
+# Claude Code — entire directory is local tooling, never upstream
+.claude/
+
+# Contributor working notes (not for upstream)
+dbRollin/
+
+# Python bytecode
+__pycache__/
+
+# Generated simulation output
+Elmer-3a/sweep_results/
+Elmer-3a/case_t0001*.vtu
+Elmer-3a/*.sif.original
+Elmer-3a/case_thermal*
+Elmer-3a/solve_*.log
+Elmer-3a/render_*.py
+
+# Project-level Claude Code instructions (local, not for upstream)
+CLAUDE.md
