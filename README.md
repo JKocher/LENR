@@ -28,13 +28,16 @@ This repository contains (or will eventually contain):
 Refer to:
 
 - [`Open-Source Sonoluminescence LENR Reactor v0.1.0.pdf`](./Open-Source%20Sonoluminescence%20LENR%20Reactor%20v0.1.0.pdf)
+- [`Reactor Simulation Guide v0.1.0.pdf`](./Reactor%20Simulation%20Guide%20v0.1.0.pdf)
 - [`Sonoluminescence Reactor System Diagram v0.1.0.pdf`](./Sonoluminescence%20Reactor%20System%20Diagram%20v0.1.0.pdf)
 
-These include detailed system architecture, design philosophy, core scientific rationale, and practical insights for reproducible LENR research.
+These include detailed system architecture, simulation workflow, design philosophy, core scientific rationale, and practical insights for reproducible LENR research.
+
+For acoustic simulation results and analysis, see [`docs/`](./docs/) — includes FEM/analytical comparison, cavity mode predictions, and a printable PDF report.
 
 ## License
 
-This project is licensed under the [MIT License](./LICENSE.txt). You are free to use, modify, and build upon it—ideally for the benefit of science and humanity.
+This project is licensed under the [MIT License](./LICENSE). You are free to use, modify, and build upon it—ideally for the benefit of science and humanity.
 
 ## Feedback & Contributions
 
